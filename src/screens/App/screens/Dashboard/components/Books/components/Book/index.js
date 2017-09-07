@@ -16,7 +16,7 @@ const Book = ({ book }) => {
 
 Book.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.string,
+    id: PropTypes.number,
     image_url: PropTypes.string,
     author: PropTypes.string,
     title: PropTypes.string
