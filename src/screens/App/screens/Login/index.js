@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { login } from '../../../../services/userService';
 import LoginLayout from './layout';
 import history from '../../../../history';
+import { setLoginInfo } from '../../../../auth';
 
 class Login extends Component {
   state = {
@@ -16,7 +17,8 @@ class Login extends Component {
       password: event.target.password.value
     };
     login(user).then((response) => {
-      history.push('/dashboard')
+      setLoginInfo(response.data);
+      history.push('/dashboard');
     }).catch((error) => {
       this.setState({ showError: true });
     })
