@@ -2,7 +2,7 @@ import React from 'react';
 import userDefault from '../../../../../../../../assets/user.png';
 import './ShowComment.css';
 
-const ShowComment = props =>
+const ShowComment = () =>
   <div className='comment'>
     <img className='profile-picture' src={ userDefault } alt='User'/>
     <div className='comment-info'>

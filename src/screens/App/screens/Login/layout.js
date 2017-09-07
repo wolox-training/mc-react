@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import FormInput from '../shared/FormInput';
 import './Login.css';
@@ -27,5 +28,10 @@ const LoginLayout = ({ onSubmit, showError }) =>
       </div>
     </form>
   </div>;
+
+LoginLayout.propTypes = {
+  onSubmit: PropTypes.func,
+  showError: PropTypes.bool
+};
 
 export default LoginLayout;

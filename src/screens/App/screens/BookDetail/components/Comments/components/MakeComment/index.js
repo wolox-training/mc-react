@@ -2,7 +2,7 @@ import React from 'react';
 import userDefault from '../../../../../../../../assets/user.png';
 import './MakeComment.css';
 
-const MakeComment = props => 
+const MakeComment = () => 
   <div className='new-comment-container'>
     <img className='profile-picture' src={ userDefault } alt='User'/>
     <div className='new-comment'>
