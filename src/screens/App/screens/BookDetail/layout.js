@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BookInfo from '../components/BookInfo';
-import Suggestions from '../components/Suggestions';
-import Comments from '../components/Comments';
+import BookInfo from './components/BookInfo';
+import Suggestions from './components/Suggestions';
+import Comments from './components/Comments';
 
-function BookDetailScreen(props) {
+function BookDetailLayout(props) {
   return (
     <div>
       <Link to='/dashboard'>
@@ -19,4 +19,4 @@ function BookDetailScreen(props) {
   );
 }
 
-export default BookDetailScreen;
+export default BookDetailLayout;

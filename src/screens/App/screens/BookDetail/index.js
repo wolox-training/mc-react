@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import books from '../../../../resources/books.json';
-import BookDetailScreen from './screen';
+import BookDetailLayout from './layout';
 
 class BookDetail extends Component {
   state = {
@@ -25,7 +25,7 @@ class BookDetail extends Component {
 
   render() {
     return (
-      <BookDetailScreen book={ this.state.book } />
+      <BookDetailLayout book={ this.state.book } />
     );
   }
 }

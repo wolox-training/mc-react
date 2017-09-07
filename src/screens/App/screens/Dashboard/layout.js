@@ -1,8 +1,8 @@
 import React from 'react';
-import Filter from '../components/Filter';
-import Books from '../components/Books';
+import Filter from './components/Filter';
+import Books from './components/Books';
 
-function DashboardScreen(props) {
+function DashboardLayout(props) {
   return (
     <div className='books-container'>
       <Filter
@@ -15,4 +15,4 @@ function DashboardScreen(props) {
   );
 };
 
-export default DashboardScreen;
+export default DashboardLayout;

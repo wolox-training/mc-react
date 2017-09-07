@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DashboardScreen from './screen';
+import DashboardLayout from './layout';
 import books from '../../../../resources/books.json';
 import './Dashboard.css';
 
@@ -33,7 +33,7 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <DashboardScreen 
+      <DashboardLayout 
         books={ this.state.filteredBooks }
         onAttrChange={ this.handleAttrChange }
         onValueChange={ this.handleValueChange } 

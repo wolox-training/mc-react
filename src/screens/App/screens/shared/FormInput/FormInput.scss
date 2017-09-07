@@ -1,0 +1,18 @@
+@import '../../../../../stylesheets/variables.scss';
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  .label {
+    margin-bottom: 10px;
+  }
+
+  .input {
+    background-color: $grey-1;
+    border: none;
+    height: 40px;
+    padding-left: 10px;
+  }
+}
