@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import Link from 'redux-first-router-link';
 
 import BookInfo from './components/BookInfo';
 import Suggestions from './components/Suggestions';
@@ -8,7 +9,7 @@ import Comments from './components/Comments';
 
 const BookDetailLayout = ({ book }) =>
   <div>
-    <Link to='/dashboard'>
+    <Link to={{ type: 'DASHBOARD' }}>
         &lt; Volver
     </Link>
     <div className='book-detail'>
@@ -27,4 +28,4 @@ BookDetailLayout.propTypes = {
   }).isRequired
 };
 
-export default BookDetailLayout;
+export default connect()(BookDetailLayout);

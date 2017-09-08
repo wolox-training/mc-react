@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 import PropTypes from 'prop-types';
 
 const Book = ({ book }) => {
@@ -23,4 +25,4 @@ Book.propTypes = {
   }).isRequired
 };
 
-export default Book;
+export default connect()(Book);

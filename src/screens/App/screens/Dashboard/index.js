@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import DashboardLayout from './layout';
 import books from '../../../../resources/books.json';
 import './Dashboard.css';
@@ -44,4 +46,4 @@ class Dashboard extends Component {
 
 };
 
-export default Dashboard;
+export default connect()(Dashboard);

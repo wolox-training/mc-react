@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import books from '../../../../resources/books.json';
 import BookDetailLayout from './layout';
 
@@ -30,4 +32,4 @@ class BookDetail extends Component {
   }
 }
 
-export default BookDetail;
+export default connect()(BookDetail);
