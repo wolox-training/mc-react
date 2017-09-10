@@ -3,18 +3,14 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import registerServiceWorker from './registerServiceWorker';
-import App from './screens/App/App.js';
-// import Dashboard from './screens/App/screens/Dashboard';
-// import BookDetail from './screens/App/screens/BookDetail';
-// import Login from './screens/App/screens/Login';
-import './index.css';
+import RouteComponent from './App/components/Routes';
 import store from './store';
+import './index.css';
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <RouteComponent />
   </Provider>
-  ,
-  document.getElementById('root')
+  , document.getElementById('root')
 );
 registerServiceWorker();
