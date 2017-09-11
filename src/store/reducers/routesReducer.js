@@ -1,12 +1,9 @@
+const routesReducer = (state = 'DASHBOARD', action = {}) => components[action.type] || state;
 
-const routesReducer = (state = {}, action) => {
-  switch(action.type) {
-    case 'DASHBOARD':
-       return 'dashboard'
-    case 'BOOK_DETAIL':
-       return 'bookDetail'
-  }
-  return state;
+const components = {
+  DASHBOARD: 'Dashboard',
+  BOOK_DETAIL: 'BookDetail',
+  LOGIN: 'Login'
 };
 
 export default routesReducer;

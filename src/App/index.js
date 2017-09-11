@@ -1,16 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import Dashboard from './components/Dashboard';
 import BookDetail from './components/BookDetail';
 import Login from './components/Login';
 
-class App extends Component {
-  render() {
-    return (
-      <Dashboard />
-    );
-  }
-}
+const routes = {
+  Dashboard,
+  BookDetail,
+  Login
+};
 
-export default connect()(App);
+const RouteComponent = ({ route }) => {
+  const Route = routes[route];
+  return Route ? <Route /> : null;
+};
+
+export default connect((state) => ({
+  route: state.routesReducer
+}))(RouteComponent)
