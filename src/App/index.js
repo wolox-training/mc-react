@@ -11,11 +11,11 @@ const routes = {
   Login
 };
 
-const RouteComponent = ({ route }) => {
+const App = ({ route }) => {
   const Route = routes[route];
-  return Route ? <Route /> : null;
+  return <Route />;
 };
 
 export default connect((state) => ({
   route: state.routesReducer
-}))(RouteComponent)
+}))(App)
