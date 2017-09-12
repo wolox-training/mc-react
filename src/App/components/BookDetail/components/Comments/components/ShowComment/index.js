@@ -1,5 +1,5 @@
 import React from 'react';
-import userDefault from '../../../../../../../../assets/user.png';
+import userDefault from '../../../../../../../assets/user.png';
 import './ShowComment.css';
 
 const ShowComment = props =>

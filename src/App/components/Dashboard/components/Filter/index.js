@@ -1,6 +1,6 @@
 import React from 'react';
 import './Filter.css';
-import searchImage from '../../../../../../assets/search.svg';
+import searchImage from '../../../../../assets/search.svg';
 
 const filters = [
   { label: 'Seleccionar filtro', value: ''},
@@ -13,7 +13,7 @@ function Filter(props) {
     <div className='filter'>
       <form className='search-form' onSubmit={ props.onFilter }>
         <select className='filter-value margin-r-3' onChange={ props.onAttrChange }>
-          { 
+          {
             filters.map((filter, index) =>
               <option value={ filter.value } key={ index }>{ filter.label }</option>
             )

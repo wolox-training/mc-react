@@ -1,4 +1,4 @@
-@import "../../../../../../stylesheets/variables.scss";
+@import "../../../../../stylesheets/variables.scss";
 
 .suggestions-container {
   padding: 0 25px 30px;
@@ -16,5 +16,5 @@
 }
 
 .no-cover {
-  background: url('../../../../../../assets/default_book.svg') no-repeat center $grey-2;
+  background: url('../../../../../assets/default_book.svg') no-repeat center $grey-2;
 }

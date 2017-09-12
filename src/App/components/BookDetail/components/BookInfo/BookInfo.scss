@@ -1,4 +1,4 @@
-@import "../../../../../../stylesheets/variables.scss";
+@import "../../../../../stylesheets/variables.scss";
 
 .book-detail {
   padding: 20px 150px;
@@ -19,7 +19,7 @@
   }
 
   .no-cover {
-    background: url('../../../../../../assets/default_book.svg') no-repeat center $grey-2;
+    background: url('../../../../../assets/default_book.svg') no-repeat center $grey-2;
   }
 
   .book-info {

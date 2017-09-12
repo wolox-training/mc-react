@@ -1,4 +1,4 @@
-@import '../../../../../../stylesheets/variables.scss';
+@import '../../../../../stylesheets/variables.scss';
 
 .dashboard {
   display: flex;
@@ -24,16 +24,15 @@
     }
 
     .no-cover {
-      background: url('../../../../../../assets/default_book.svg') no-repeat center $grey-2;
+      background: url('../../../../../assets/default_book.svg') no-repeat center $grey-2;
     }
 
     .book-title {
       font-size: 14px;
     }
-    
+
     .book-author {
       font-size: 12px;
     }
   }
 }
-  

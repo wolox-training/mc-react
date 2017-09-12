@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DashboardScreen from './screen';
-import books from '../../../../resources/books.json';
+import books from '../../../resources/books.json';
 import './Dashboard.css';
 
 class Dashboard extends Component {
@@ -25,7 +25,7 @@ class Dashboard extends Component {
   }
 
   changeBooks = (event) => {
-    this.setState({ 
+    this.setState({
       filteredBooks: this.filterBooks()
     });
     event.preventDefault();
@@ -33,10 +33,10 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <DashboardScreen 
+      <DashboardScreen
         books={ this.state.filteredBooks }
         onAttrChange={ this.handleAttrChange }
-        onValueChange={ this.handleValueChange } 
+        onValueChange={ this.handleValueChange }
         onFilter={ this.changeBooks }
       />
     );
