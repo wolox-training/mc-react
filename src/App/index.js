@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import Navbar from './components/shared/Navbar';
 import Dashboard from './components/Dashboard';
 import BookDetail from './components/BookDetail';
 import Login from './components/Login';
@@ -13,7 +14,12 @@ const routes = {
 
 const App = ({ route }) => {
   const Route = routes[route];
-  return <Route />;
+  return (
+    <div>
+      <Navbar />
+      <Route />
+    </div>
+  );
 };
 
 export default connect((state) => ({

@@ -1,20 +1,7 @@
-import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
-import { connectRoutes } from 'redux-first-router';
-import createHistory from 'history/createBrowserHistory';
+import { createStore, compose, applyMiddleware } from 'redux';
 
-import routesReducer from './reducers/routesReducer';
+import { rootReducer, middleware, enhancer } from './routesMap';
 
-const history = createHistory();
-
-const routesMap = {
-  LOGIN: '/login',
-  DASHBOARD: '/dashboard',
-  BOOK_DETAIL: '/book/:id'
-};
-
-const { reducer, middleware, enhancer } = connectRoutes(history, routesMap);
-
-const rootReducer = combineReducers({ location: reducer, routesReducer });
 const middlewares = applyMiddleware(middleware);
 
 export default createStore(
