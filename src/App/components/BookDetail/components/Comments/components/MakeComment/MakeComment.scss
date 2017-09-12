@@ -1,0 +1,40 @@
+@import "../../../../../../../stylesheets/variables.scss";
+
+.new-comment-container {
+  display: flex;
+  margin-left: 25px;
+}
+
+.new-comment {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.comment-text {
+  height: 75px;
+  max-width: 665px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.add-comment {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+}
+
+.button-green {
+  background: $green-1;
+  border: none;
+  color: $white;
+  font-size: 16px;
+  font-weight: bold;
+  height: 40px;
+  width: 190px;
+}

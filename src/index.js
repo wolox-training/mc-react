@@ -4,10 +4,10 @@ import { Router, Route } from 'react-router-dom';
 import history from './history';
 
 import registerServiceWorker from './registerServiceWorker';
-import App from './screens/App/App.js';
-import Dashboard from './screens/App/screens/Dashboard';
-import BookDetail from './screens/App/screens/BookDetail';
-import Login from './screens/App/screens/Login';
+import App from './App';
+import Dashboard from './App/components/Dashboard';
+import BookDetail from './App/components/BookDetail';
+import Login from './App/components/Login';
 import './index.css';
 
 ReactDOM.render(
