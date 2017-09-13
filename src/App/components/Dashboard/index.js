@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import DashboardLayout from './layout';
-import books from '../../../resources/books.json';
+import { getBooks } from '../../../store/actions/booksActions';
 import './Dashboard.css';
 
 class Dashboard extends Component {
@@ -10,6 +10,10 @@ class Dashboard extends Component {
     filterAttr: '',
     filterValue: '',
     filteredBooks: books
+  }
+
+  componentDidMount() {
+    this.props.dispatch(getBooks());
   }
 
   handleValueChange = (event) => {
@@ -36,7 +40,7 @@ class Dashboard extends Component {
   render() {
     return (
       <DashboardLayout
-        books={ this.state.filteredBooks }
+        books={ this.props.books }
         onAttrChange={ this.handleAttrChange }
         onValueChange={ this.handleValueChange }
         onFilter={ this.changeBooks }
@@ -46,4 +50,6 @@ class Dashboard extends Component {
 
 };
 
-export default connect()(Dashboard);
+export default connect((state) => {
+  books: state.dashboardReducer.books
+})(Dashboard);
